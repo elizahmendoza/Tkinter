@@ -1,0 +1,31 @@
+from tkinter import *
+root = Tk()
+root.geometry("1200x500")
+
+f1 = Frame(root, bg ="Beige", borderwidth= 1)
+
+f1 = Frame(root, bg ="White", borderwidth= 10)
+f1.pack(side=BOTTOM, fill="y")
+
+f2 = Frame(root, bg ="White", borderwidth= 10)
+f2.pack(side=TOP, fill="x")
+
+l=Label(f1, text="It’s a love story, perhaps, for NFL tight end Travis Kelce and Taylor Swift, who was seen in Kelce’s family suite at Sunday’s game between the Kansas City Chiefs and the Chicago Bears.")
+l.pack()
+l=Label(f1, text="The singer was shown cheering on the Chiefs during the FOX Sports broadcast, dressed in a red and white team jacket.")
+l.pack()
+l=Label(f1, text="She appeared to be sitting next to Donna Kelce, the player’s mom, chatting and laughing throughout the game at Arrowhead Stadium in Kansas City.")
+l.pack()
+
+
+l=Label(f2, text="Taylor Swift cheers on Travis Kelce at Kansas City Chiefs Game", fg= "black", background= "white", font= "Times")
+l.pack()
+
+wel_note = Label(text= "The Daily Mail")
+wel_note.pack()
+
+photo = PhotoImage(file= "taylor.png")
+var_label = Label(image=photo)
+var_label.pack()
+
+root.mainloop()
