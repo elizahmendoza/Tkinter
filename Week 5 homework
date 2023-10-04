@@ -1,0 +1,38 @@
+from tkinter import *
+root = Tk()
+root.geometry("500x333")
+
+
+def Welcome():
+    print("Welcome")
+
+
+def OK():
+    print("Elizah")
+
+
+def submit():
+    print("data is submitted")
+
+
+f1 = Frame(root, borderwidth=6, bg="grey")
+f1.pack(side=LEFT, fill="y")
+
+f2 = Frame(root, bg ="Silver", borderwidth= 10)
+f2.pack(side=TOP, fill="x")
+
+f3 = Frame(root, bg ="Black", borderwidth= 10)
+f3.pack(side=BOTTOM, fill="x")
+
+
+b1 = Button(f2, fg="black", text= "WELCOME", command = Welcome)
+b1.pack(side=TOP,padx=23)
+
+b2 = Button(f1, fg="black", text= "OK", command= OK)
+b2.pack(side=LEFT, padx=23)
+
+b3 = Button(f3, fg="black", text = "SUBMIT", command =submit)
+b3.pack(side=BOTTOM, padx=23)
+
+
+root.mainloop()
