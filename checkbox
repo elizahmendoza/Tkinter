@@ -1,0 +1,53 @@
+from tkinter import *
+root = Tk()
+root.geometry("400x400")
+
+def getvals():
+    print(f"The value of name is {namevalue.get()}")
+    print(f"The value of phone is {phonevalue.get()}")
+    print(f"The value of gender is {gendervalue.get()}")
+    print(f"The value of emergency is {emergencyvalue.get()}")
+    print(f"The value of payment is {paymentvalue.get()}")
+
+Label(root, text="Membership Form", font="comicsans 13 bold", pady=15).grid
+
+name = Label(root, text="Name", pady=15, padx=15)
+phone = Label(root, text="Phone", pady=15, padx=15)
+gender = Label(root, text="Gender", pady=15, padx=15)
+emergency = Label(root, text="Emergency", pady=15, padx=15)
+payment = Label(root, text="Payment", pady=15, padx=15)
+
+name.grid(row=1, column=3)
+phone.grid(row=2, column=3)
+gender.grid(row=3, column=3)
+emergency.grid(row=4, column=3)
+payment.grid(row=5, column=3)
+
+namevalue = StringVar()
+phonevalue = StringVar()
+gendervalue = StringVar()
+emergencyvalue = StringVar()
+paymentvalue = StringVar()
+foodservicevalue = StringVar()
+
+
+nameentry = Entry(root, textvariable = namevalue)
+phoneentry = Entry(root, textvariable = phonevalue)
+genderentry = Entry(root, textvariable = gendervalue)
+emergencyentry = Entry(root, textvariable = emergencyvalue)
+paymententry = Entry(root, textvariable = paymentvalue)
+
+
+nameentry.grid(row=1,column=4)
+phoneentry.grid(row=2,column=4)
+genderentry.grid(row=3,column=4)
+emergencyentry.grid(row=4,column=4)
+paymententry.grid(row=5, column=4)
+
+foodservice = Checkbutton(text="Want to prebook your seat?", variable = foodservicevalue)
+foodservice.grid(row=6, column=4)
+
+Button(text= "Submit to Company", command=getvals).grid(row=7, column=4)
+
+
+root.mainloop()
